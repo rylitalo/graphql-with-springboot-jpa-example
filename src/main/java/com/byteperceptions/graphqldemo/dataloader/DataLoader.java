@@ -37,9 +37,9 @@ public class DataLoader {
         Customer sallyBrown = createCustomer("Sally", "Brown");
 
         Account bobsCheckingAccount = createAccount(bobJohnson, "Bob's Checking Account", 2100.50);
-        Account bobsSavingAccount = createAccount(bobJohnson, "Bob's Checking Account", 325.50);
+        Account bobsSavingAccount = createAccount(bobJohnson, "Bob's Savings Account", 325.50);
         Account sallysCheckingAccount = createAccount(sallyBrown, "Sally's Checking Account", 500.50);
-        Account sallysSavingAccount = createAccount(sallyBrown, "Sally's Checking Account", 5555.50);
+        Account sallysSavingAccount = createAccount(sallyBrown, "Sally's Savings Account", 5555.50);
     }
 
     private Customer createCustomer(String firstName, String lastName){
