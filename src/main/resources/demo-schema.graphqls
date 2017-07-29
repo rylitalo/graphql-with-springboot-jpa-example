@@ -1,0 +1,22 @@
+schema {
+  query: Query
+}
+
+type Query {
+  AllCustomers : [Customer]
+  Customer : Customer
+}
+
+type Customer {
+  id : String
+  firstName : String
+  lastName : String
+  accounts : [Account]
+}
+
+type Account {
+  id : String
+  name : String
+  customer : Customer
+  balance : Float
+}
