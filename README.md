@@ -13,6 +13,7 @@ After starting the application, use postman to POST a request to the following u
 **http://localhost:8080/graphql** in a browser.
 
 ## Request body of POST for Single Customer
+ ```
  {
  	customer (id: "1") {
  		id
@@ -26,8 +27,10 @@ After starting the application, use postman to POST a request to the following u
  		}
  	}
  }
+```
 
  ## Response Body of POST for Single Customer
+ ```json
  {
      "customer": {
          "id": "1",
@@ -46,10 +49,11 @@ After starting the application, use postman to POST a request to the following u
              }
          ]
      }
- }
+ }```
 
 
  ## Request body of POST for All Customers
+  ```
   {
   	allCustomers {
   		id
@@ -63,8 +67,10 @@ After starting the application, use postman to POST a request to the following u
   		}
   	}
   }
+  ```
 
   ## Response Body of POST for All Customers
+  ```json
 {
     "allCustomers": [
         {
@@ -102,4 +108,4 @@ After starting the application, use postman to POST a request to the following u
             ]
         }
     ]
-}
+}```
