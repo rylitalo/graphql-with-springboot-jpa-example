@@ -49,7 +49,8 @@ After starting the application, use postman to POST a request to the following u
              }
          ]
      }
- }```
+ }
+ ```
 
 
  ## Request body of POST for All Customers
@@ -108,4 +109,5 @@ After starting the application, use postman to POST a request to the following u
             ]
         }
     ]
-}```
+}
+```
