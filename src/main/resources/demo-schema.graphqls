@@ -3,8 +3,8 @@ schema {
 }
 
 type Query {
-  AllCustomers : [Customer]
-  Customer : Customer
+  allCustomers : [Customer]
+  customer(id: String) : Customer
 }
 
 type Customer {

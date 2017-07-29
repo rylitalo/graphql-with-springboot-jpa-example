@@ -30,7 +30,7 @@ public class AllCustomersDataFetcher implements DataFetcher<List<Customer>> {
     private CustomerRepository customerRepository;
 
     @Override
-    public List<Customer> get(DataFetchingEnvironment environment) {
+    public List<Customer> get(DataFetchingEnvironment environment){
         return customerRepository.findAll();
     }
 }

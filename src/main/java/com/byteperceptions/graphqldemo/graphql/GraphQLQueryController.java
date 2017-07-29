@@ -60,14 +60,17 @@ public class GraphQLQueryController {
 
     private RuntimeWiring buildRuntimeWiring(){
         return RuntimeWiring.newRuntimeWiring().type(("Query"), typeWiring -> typeWiring
-                .dataFetcher("AllCustomers", allCustomersDataFetcher)
-                .dataFetcher("Customer", singleCustomerDataFetcher))
+                .dataFetcher("allCustomers", allCustomersDataFetcher)
+                .dataFetcher("customer", singleCustomerDataFetcher))
                 .build();
     }
 
     @RequestMapping(value = "/graphql", method = RequestMethod.POST)
     public ResponseEntity graphQLQuery(@RequestBody String query){
         ExecutionResult result = graphQL.execute(query);
+        if(!result.getErrors().isEmpty()){
+            return ResponseEntity.ok(result.getErrors());
+        }
         return ResponseEntity.ok(result.getData());
     }
 }
