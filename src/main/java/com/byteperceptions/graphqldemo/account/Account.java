@@ -3,6 +3,7 @@ package com.byteperceptions.graphqldemo.account;
 import com.byteperceptions.graphqldemo.customer.Customer;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -24,6 +25,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @NoArgsConstructor
+@ToString(of={"id"})
 public class Account {
 
 
