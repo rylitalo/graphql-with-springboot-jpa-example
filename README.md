@@ -64,13 +64,7 @@ After starting application, use postman to request to the following URL
         id
         firstName
         lastName
-    }
-
-     accountId : String
-      customerId : String
-      accountName : String
-
-
+    },
     second : saveCoach(id : "22", firstName : "Sally", lastName : "Brown", accounts : [{accountId: "33", customerId: "22", accountName:"Sally Checking"},{accountId: "34", customerId: "22", accountName:"Sally Saving"}]){
         id
         firstName
