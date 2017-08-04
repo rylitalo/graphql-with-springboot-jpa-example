@@ -73,4 +73,13 @@ public class GraphQLQueryController {
         }
         return ResponseEntity.ok(result.getData());
     }
+
+    @RequestMapping(value = "/mutate", method = RequestMethod.POST)
+    public ResponseEntity mutate(@RequestBody String mutation){
+        ExecutionResult result = graphQL.execute(mutation);
+        if(!result.getErrors().isEmpty()){
+            return ResponseEntity.ok(result.getErrors());
+        }
+        return ResponseEntity.ok(result.getData());
+    }
 }

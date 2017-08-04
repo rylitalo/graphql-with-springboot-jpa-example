@@ -53,6 +53,59 @@ After starting the application, use postman to POST a request to the following u
  ```
 
 
+
+
+## Request body of Update/Create for a list of new and existing customers
+After starting application, use postman to request to the following URL
+**http://localhost:8080/mutate** in a browser
+ ```
+ mutation M{
+    first : saveCoach(firstName : "Bob", lastName : "Customer"){
+        id
+        firstName
+        lastName
+    }
+
+     accountId : String
+      customerId : String
+      accountName : String
+
+
+    second : saveCoach(id : "22", firstName : "Sally", lastName : "Brown", accounts : [{accountId: "33", customerId: "22", accountName:"Sally Checking"},{accountId: "34", customerId: "22", accountName:"Sally Saving"}]){
+        id
+        firstName
+        lastName
+        accounts {
+            id
+            name
+        }
+    }
+ }
+
+ ```
+## Response Body of POST  Update/Create for a list of new and existing customers
+ ```json
+ {
+     "customer": {
+         "id": "1",
+         "firstName": "Bob",
+         "lastName": "Johnson",
+         "accounts": [
+             {
+                 "id": "1",
+                 "name": "Bob's Checking Account",
+                 "balance": 2100.5
+             },
+             {
+                 "id": "2",
+                 "name": "Bob's Savings Account",
+                 "balance": 325.5
+             }
+         ]
+     }
+ }
+ ```
+
  ## Request body of POST for All Customers
   ```
   {
