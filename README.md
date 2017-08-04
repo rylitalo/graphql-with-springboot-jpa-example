@@ -87,13 +87,11 @@ After starting application, use postman to request to the following URL
          "accounts": [
              {
                  "id": "1",
-                 "name": "Bob's Checking Account",
-                 "balance": 2100.5
+                 "name": "Bob's Checking Account"
              },
              {
                  "id": "2",
-                 "name": "Bob's Savings Account",
-                 "balance": 325.5
+                 "name": "Bob's Savings Account"
              }
          ]
      }
